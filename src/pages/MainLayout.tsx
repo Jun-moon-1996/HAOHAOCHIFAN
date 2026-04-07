@@ -12,14 +12,14 @@ export default function MainLayout() {
 
   return (
     <div className="flex flex-col h-full bg-bg-light relative overflow-hidden">
-      <div className="flex-1 overflow-y-auto hide-scrollbar min-h-0">
+      <div className="flex-1 overflow-y-auto hide-scrollbar min-h-0 pb-32">
         {tab === 'recipe' && <RecipeTab />}
         {tab === 'random' && <RandomPickerTab />}
         {tab === 'groceries' && <GroceriesTab />}
         {tab === 'profile' && <ProfileTab />}
       </div>
 
-      <div className="shrink-0 px-4 pt-2 pb-[env(safe-area-inset-bottom,34px)] bg-bg-light/80 backdrop-blur-sm z-50 border-t border-gray-100">
+      <div className="fixed bottom-0 left-0 right-0 px-4 pt-2 !pb-[calc(env(safe-area-inset-bottom,34px))] bg-bg-light/80 backdrop-blur-sm z-50 border-t border-gray-100">
         <div className="bg-white/95 backdrop-blur-lg rounded-2xl flex justify-around items-center h-[60px] px-2 shadow-lg border border-white/40">
           {[
             { id: 'recipe', icon: BookOpen },

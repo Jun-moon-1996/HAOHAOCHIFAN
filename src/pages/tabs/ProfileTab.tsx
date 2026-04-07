@@ -112,7 +112,7 @@ export default function ProfileTab() {
   const visibleSections = sections.filter(s => !s.hidden);
 
   return (
-    <div className="bg-bg-light pb-32">
+    <div className="bg-bg-light">
       <div className="bg-gradient-to-b from-primary/15 to-transparent px-5 pt-[calc(3rem+env(safe-area-inset-top))] pb-10">
         <div className="flex items-center gap-4 mb-10">
           <div className="w-24 h-24 rounded-lg shadow-2xl overflow-hidden rotate-3">

@@ -111,7 +111,7 @@ export default function GroceriesTab() {
   }, {} as Record<string, typeof INGREDIENTS>);
 
   return (
-    <div className="bg-bg-light flex flex-col relative pb-32">
+    <div className="bg-bg-light flex flex-col relative">
       <div className="bg-gradient-to-b from-primary/15 to-transparent px-5 pt-[calc(3rem+env(safe-area-inset-top))] pb-0">
         {/* Mode Toggle */}
         <div className="flex glass p-2 rounded-full mb-6 shadow-sm">

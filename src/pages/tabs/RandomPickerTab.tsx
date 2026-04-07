@@ -77,7 +77,7 @@ export default function RandomPickerTab() {
   };
 
   return (
-    <div className="flex flex-col items-center p-5 bg-bg-light pb-32">
+    <div className="flex flex-col items-center p-5 bg-bg-light">
       {/* Header Section */}
       <div className="w-full flex justify-center items-start pt-[calc(3rem+env(safe-area-inset-top))] mb-12 px-5">
         <div className="text-center">
