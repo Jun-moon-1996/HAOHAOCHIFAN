@@ -28,7 +28,7 @@ function AppContent() {
   const { view } = useAppStore();
 
   return (
-    <div className="w-full h-screen max-w-md mx-auto bg-white shadow-2xl overflow-hidden relative">
+    <div className="w-full h-full sm:max-w-md mx-auto bg-white sm:shadow-2xl overflow-hidden relative">
       {view === 'login' && <Login />}
       {view === 'preferences' && <Preferences />}
       {view === 'main' && <MainLayout />}
@@ -54,7 +54,7 @@ function AppContent() {
 export default function App() {
   return (
     <AppProvider>
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-100 sm:flex sm:items-center sm:justify-center">
         <AppContent />
       </div>
     </AppProvider>

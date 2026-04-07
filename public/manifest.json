@@ -1,0 +1,21 @@
+{
+  "name": "好好吃饭",
+  "short_name": "好好吃饭",
+  "description": "A food recommendation, recipe, and grocery shopping app.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7FAF7",
+  "theme_color": "#5DBE61",
+  "icons": [
+    {
+      "src": "https://picsum.photos/seed/food/192/192",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://picsum.photos/seed/food/512/512",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -11,7 +11,7 @@ export default function MainLayout() {
   const { tab, setTab } = useAppStore();
 
   return (
-    <div className="flex flex-col h-screen bg-bg-light max-w-md mx-auto relative shadow-2xl overflow-hidden">
+    <div className="flex flex-col h-full bg-bg-light sm:max-w-md mx-auto relative sm:shadow-2xl overflow-hidden">
       <div className="flex-1 overflow-y-auto pb-24 hide-scrollbar">
         {tab === 'recipe' && <RecipeTab />}
         {tab === 'random' && <RandomPickerTab />}
