@@ -19,7 +19,7 @@ export default function MainLayout() {
         {tab === 'profile' && <ProfileTab />}
       </div>
 
-      <div className="fixed !bottom-0 left-0 right-0 pb-[env(safe-area-inset-bottom,34px)] h-[calc(64px+env(safe-area-inset-bottom,34px))] bg-white flex items-start justify-around pt-[10px] shadow-[0_-2px_10px_rgba(0,0,0,0.05)] z-50">
+      <div className="fixed bottom-0 left-0 right-0 sm:max-w-md sm:mx-auto bg-[#FFFFFF] flex justify-around items-center h-[calc(64px+env(safe-area-inset-bottom))] pb-[env(safe-area-inset-bottom)] shadow-[0_-8px_30px_rgba(0,0,0,0.04)] z-50 rounded-none border-none">
         {[
           { id: 'recipe', icon: BookOpen },
           { id: 'random', icon: Dices },
