@@ -43,7 +43,7 @@ export default function Preferences() {
   };
 
   return (
-    <div className="flex flex-col h-full bg-bg-light">
+    <div className="flex flex-col h-full bg-[#F7FAF7]">
       {/* Header */}
       {!isInitialSetup && (
         <div className="glass px-5 pt-[44px] shadow-sm sticky top-0 z-10 backdrop-blur-lg shrink-0">
@@ -69,7 +69,7 @@ export default function Preferences() {
           <section>
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-lg font-semibold text-gray-800 tracking-tight">口味偏好</h2>
-              <span className="text-xs font-normal text-primary uppercase tracking-widest">Taste</span>
+              <span className="text-xs font-normal text-[#5DBE61] uppercase tracking-widest">Taste</span>
             </div>
             <div className="flex flex-wrap gap-3">
               {TASTES.map(taste => (
@@ -78,7 +78,7 @@ export default function Preferences() {
                   onClick={() => toggleTaste(taste)}
                   className={`px-6 py-3 rounded-lg text-xs font-normal transition-all shadow-sm border active:scale-95 ${
                     selectedTastes.includes(taste)
-                      ? 'bg-green-gradient text-white border-transparent shadow-lg shadow-primary/20 scale-105'
+                      ? 'bg-gradient-to-br from-[#81C784] to-[#4CAF50] text-white border-transparent shadow-lg shadow-[#5DBE61]/20 scale-105'
                       : 'glass text-gray-600 border-white/20 hover:bg-white'
                   }`}
                 >
@@ -91,7 +91,7 @@ export default function Preferences() {
           <section>
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-lg font-semibold text-gray-800 tracking-tight">饮食忌口</h2>
-              <span className="text-xs font-normal text-primary uppercase tracking-widest">Restrictions</span>
+              <span className="text-xs font-normal text-[#5DBE61] uppercase tracking-widest">Restrictions</span>
             </div>
             <div className="flex flex-wrap gap-3">
               {RESTRICTIONS.map(res => (
@@ -100,7 +100,7 @@ export default function Preferences() {
                   onClick={() => toggleRestriction(res)}
                   className={`px-6 py-3 rounded-lg text-xs font-normal transition-all shadow-sm border active:scale-95 ${
                     selectedRestrictions.includes(res)
-                      ? 'bg-green-gradient text-white border-transparent shadow-lg shadow-primary/20 scale-105'
+                      ? 'bg-gradient-to-br from-[#81C784] to-[#4CAF50] text-white border-transparent shadow-lg shadow-[#5DBE61]/20 scale-105'
                       : 'glass text-gray-600 border-white/20 hover:bg-white'
                   }`}
                 >
@@ -113,7 +113,7 @@ export default function Preferences() {
           <section>
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-lg font-semibold text-gray-800 tracking-tight">饮食目标</h2>
-              <span className="text-xs font-normal text-primary uppercase tracking-widest">Goals</span>
+              <span className="text-xs font-normal text-[#5DBE61] uppercase tracking-widest">Goals</span>
             </div>
             <div className="grid grid-cols-2 gap-4">
               {GOALS.map(goal => (
@@ -122,11 +122,11 @@ export default function Preferences() {
                   onClick={() => setSelectedGoal(goal)}
                   className={`p-6 rounded-lg text-xs font-normal transition-all border-2 flex flex-col items-center justify-center gap-3 ${
                     selectedGoal === goal
-                      ? 'border-primary bg-primary/5 text-primary shadow-xl shadow-primary/10 scale-105'
+                      ? 'border-[#5DBE61] bg-[#5DBE61]/5 text-[#5DBE61] shadow-xl shadow-[#5DBE61]/10 scale-105'
                       : 'border-transparent glass text-gray-600 hover:bg-white'
                   }`}
                 >
-                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center transition-colors ${selectedGoal === goal ? 'bg-green-gradient text-white' : 'glass text-gray-400'}`}>
+                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center transition-colors ${selectedGoal === goal ? 'bg-gradient-to-br from-[#81C784] to-[#4CAF50] text-white' : 'glass text-gray-400'}`}>
                     {goal === 'Weight Loss' ? '🔥' : '🥗'}
                   </div>
                   {goal === 'Weight Loss' ? '减脂' : '健康饮食'}
@@ -138,7 +138,7 @@ export default function Preferences() {
       </div>
 
       {/* Fixed-at-bottom Button Container */}
-      <div className="px-4 pt-4 pb-[calc(2rem+env(safe-area-inset-bottom))] bg-bg-light shrink-0 z-20">
+      <div className="px-4 pt-4 pb-[calc(2rem+env(safe-area-inset-bottom))] bg-[#F7FAF7] shrink-0 z-20">
         <button
           onClick={handleSave}
           className="w-full bg-gray-900 hover:bg-gray-800 text-white font-semibold py-5 rounded-full transition-all shadow-2xl active:scale-95 uppercase tracking-widest text-sm"

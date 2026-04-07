@@ -30,19 +30,19 @@ export default function RecipeTab() {
   });
 
   return (
-    <div className="min-h-full bg-bg-light">
-      <div className="bg-gradient-to-b from-primary/15 to-transparent px-5 pt-[calc(3rem+env(safe-area-inset-top))] pb-4">
+    <div className="min-h-full bg-[#F7FAF7]">
+      <div className="bg-gradient-to-b from-[#5DBE61]/15 to-transparent px-5 pt-[calc(3rem+env(safe-area-inset-top))] pb-4">
         {/* Search Bar */}
         <div className="relative flex items-center mb-[20px] group">
           <div className="absolute left-4 z-10">
-            <Search className="text-gray-400 w-5 h-5 group-focus-within:text-accent transition-colors" />
+            <Search className="text-gray-400 w-5 h-5 group-focus-within:text-[#5DBE61] transition-colors" />
           </div>
           <input
             type="text"
             placeholder="你想吃什么？"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full h-[44px] glass rounded-full pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-accent/30 transition-shadow shadow-sm text-base"
+            className="w-full h-[44px] glass rounded-full pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-[#5DBE61]/30 transition-shadow shadow-sm text-base"
           />
         </div>
         
@@ -54,7 +54,7 @@ export default function RecipeTab() {
               onClick={() => setRecipeCategory(category)}
               className={`whitespace-nowrap px-6 h-[36px] flex items-center justify-center rounded-full text-xs font-bold transition-all active:scale-95 ${
                 recipeCategory === category
-                  ? 'bg-accent text-white shadow-lg scale-105'
+                  ? 'bg-[#5DBE61] text-white shadow-lg scale-105'
                   : 'glass text-gray-500 hover:bg-white/90'
               }`}
             >
@@ -67,7 +67,7 @@ export default function RecipeTab() {
           <h2 className="text-lg font-semibold text-gray-800">为你推荐</h2>
           <button 
             onClick={() => setShowAll(!showAll)}
-            className="text-xs text-accent font-normal hover:underline"
+            className="text-xs text-[#5DBE61] font-normal hover:underline"
           >
             {showAll ? '收起' : '查看全部'}
           </button>
@@ -90,13 +90,13 @@ export default function RecipeTab() {
                 <h3 className="font-medium text-gray-800 text-base mb-1 line-clamp-1">{dish.name}</h3>
                 <div className="flex flex-wrap gap-1 mb-2">
                   {dish.tags.slice(0, 2).map(tag => (
-                    <span key={tag} className="text-[9px] px-2 py-1 bg-accent/10 text-accent rounded-full font-normal">
+                    <span key={tag} className="text-[9px] px-2 py-1 bg-[#5DBE61]/10 text-[#5DBE61] rounded-full font-normal">
                       {tag}
                     </span>
                   ))}
                 </div>
                 <div className="mt-auto flex items-center text-gray-400 text-xs font-normal">
-                  <Clock className="w-3 h-3 mr-1 text-accent" />
+                  <Clock className="w-3 h-3 mr-1 text-[#5DBE61]" />
                   <span>15分钟</span>
                 </div>
               </div>

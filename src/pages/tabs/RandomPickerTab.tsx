@@ -22,10 +22,14 @@ export default function RandomPickerTab() {
 
   // Matte semi-transparent capsule colors for the gashapon machine
   const capsuleColors = [
-    'from-[#E57373]/80 to-[#E57373]/40', 'from-[#64B5F6]/80 to-[#64B5F6]/40', 
-    'from-[#81C784]/80 to-[#81C784]/40', 'from-[#BA68C8]/80 to-[#BA68C8]/40', 
-    'from-[#81C784]/80 to-[#81C784]/40', 'from-[#FFB74D]/80 to-[#FFB74D]/40', 
-    'from-[#F06292]/80 to-[#F06292]/40', 'from-[#4DB6AC]/80 to-[#4DB6AC]/40'
+    { from: '#E57373', to: '#E57373', opacityFrom: 0.8, opacityTo: 0.4 },
+    { from: '#64B5F6', to: '#64B5F6', opacityFrom: 0.8, opacityTo: 0.4 },
+    { from: '#81C784', to: '#81C784', opacityFrom: 0.8, opacityTo: 0.4 },
+    { from: '#BA68C8', to: '#BA68C8', opacityFrom: 0.8, opacityTo: 0.4 },
+    { from: '#81C784', to: '#81C784', opacityFrom: 0.8, opacityTo: 0.4 },
+    { from: '#FFB74D', to: '#FFB74D', opacityFrom: 0.8, opacityTo: 0.4 },
+    { from: '#F06292', to: '#F06292', opacityFrom: 0.8, opacityTo: 0.4 },
+    { from: '#4DB6AC', to: '#4DB6AC', opacityFrom: 0.8, opacityTo: 0.4 }
   ];
 
   const handleSpin = () => {
@@ -77,7 +81,7 @@ export default function RandomPickerTab() {
   };
 
   return (
-    <div className="flex flex-col items-center p-5 bg-bg-light">
+    <div className="flex flex-col items-center p-5 bg-[#F7FAF7] overflow-y-auto h-full">
       {/* Header Section */}
       <div className="w-full flex justify-center items-start pt-[calc(3rem+env(safe-area-inset-top))] mb-12 px-5">
         <div className="text-center">
@@ -104,6 +108,7 @@ export default function RandomPickerTab() {
                 // Random-ish cluttered positions at the bottom
                 const randomX = (i % 5) * 18 + Math.random() * 10 + 5;
                 const randomY = 55 + Math.floor(i / 5) * 10 + Math.random() * 5;
+                const color = capsuleColors[i % capsuleColors.length];
                 
                 return (
                   <motion.div
@@ -131,11 +136,12 @@ export default function RandomPickerTab() {
                       repeat: Infinity,
                       ease: "easeInOut",
                     } : {}}
-                    className={`absolute w-10 h-10 rounded-full border border-white/30 shadow-[inset_-2px_-2px_6px_rgba(0,0,0,0.1),2px_2px_4px_rgba(0,0,0,0.05)] bg-gradient-to-br ${capsuleColors[i % capsuleColors.length]}`}
+                    className="absolute w-10 h-10 rounded-full border border-white/30 shadow-[inset_-2px_-2px_6px_rgba(0,0,0,0.1),2px_2px_4px_rgba(0,0,0,0.05)]"
                     style={{
                       left: `${randomX}%`,
                       top: `${randomY}%`,
-                      zIndex: Math.floor(Math.random() * 10)
+                      zIndex: Math.floor(Math.random() * 10),
+                      background: `linear-gradient(to bottom right, ${color.from}CC, ${color.to}66)`
                     }}
                   >
                     {/* Subtle highlight for 3D effect */}
@@ -151,14 +157,14 @@ export default function RandomPickerTab() {
         <motion.div 
           animate={isSpinning ? { x: [-1, 1, -1, 1, 0] } : {}}
           transition={{ duration: 0.1, repeat: isSpinning ? Infinity : 0 }}
-          className="w-72 h-40 bg-accent border-4 border-[#3D4B48]/5 rounded-[30px] -mt-8 pt-10 pb-6 px-10 flex flex-col items-center justify-center relative shadow-xl z-0"
+          className="w-72 h-40 bg-[#5DBE61] border-4 border-[#3D4B48]/5 rounded-[30px] -mt-8 pt-10 pb-6 px-10 flex flex-col items-center justify-center relative shadow-xl z-0"
         >
           {/* GO Button */}
           <button 
             onClick={handleSpin}
             disabled={isSpinning}
             className={`w-20 h-20 rounded-full border-4 border-white/80 flex flex-col items-center justify-center transition-all active:scale-90 shadow-lg ${
-              isSpinning ? 'bg-gray-200' : 'bg-yellow-400 hover:bg-yellow-300 hover:scale-105'
+              isSpinning ? 'bg-gray-200' : 'bg-[#FFD54F] hover:bg-[#FFCA28] hover:scale-105'
             }`}
           >
             <span className="text-lg font-black italic text-gray-800 leading-none">GO!</span>
@@ -185,7 +191,7 @@ export default function RandomPickerTab() {
             >
               <div className="text-center mb-6">
                 <h2 className="text-xl font-bold text-gray-900">今日份美食推荐</h2>
-                <p className="text-[10px] text-primary font-bold mt-1 uppercase tracking-widest">Today's Special Selection</p>
+                <p className="text-[10px] text-[#5DBE61] font-bold mt-1 uppercase tracking-widest">Today's Special Selection</p>
               </div>
 
               <div className="mb-8">
@@ -206,13 +212,13 @@ export default function RandomPickerTab() {
                 <div className="flex gap-3">
                   <button 
                     onClick={() => handleViewDetails(currentDishes[0])}
-                    className="flex-1 bg-white text-accent font-bold py-4 rounded-full flex items-center justify-center active:scale-95 transition-all border-2 border-accent/20 shadow-sm"
+                    className="flex-1 bg-white text-[#5DBE61] font-bold py-4 rounded-full flex items-center justify-center active:scale-95 transition-all border-2 border-[#5DBE61]/20 shadow-sm"
                   >
                     详情
                   </button>
                   <button 
                     onClick={handleSpin}
-                    className="flex-1 bg-accent text-white font-bold py-4 rounded-full flex items-center justify-center gap-2 shadow-lg shadow-accent/20 active:scale-95 transition-all"
+                    className="flex-1 bg-[#5DBE61] text-white font-bold py-4 rounded-full flex items-center justify-center gap-2 shadow-lg shadow-[#5DBE61]/20 active:scale-95 transition-all"
                   >
                     <RefreshCw className="w-5 h-5" />
                     再抽一次
@@ -243,7 +249,7 @@ export default function RandomPickerTab() {
               onClick={() => setSelectedTaste(selectedTaste === t.id ? null : t.id)}
               className={`px-4 py-2 rounded-full text-xs font-medium transition-all border active:scale-95 ${
                 selectedTaste === t.id 
-                  ? 'bg-accent border-accent text-white shadow-md' 
+                  ? 'bg-[#5DBE61] border-[#5DBE61] text-white shadow-md' 
                   : 'glass border-gray-100 text-gray-400'
               }`}
             >

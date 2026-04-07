@@ -111,14 +111,14 @@ export default function GroceriesTab() {
   }, {} as Record<string, typeof INGREDIENTS>);
 
   return (
-    <div className="bg-bg-light flex flex-col relative">
-      <div className="bg-gradient-to-b from-primary/15 to-transparent px-5 pt-[calc(3rem+env(safe-area-inset-top))] pb-0">
+    <div className="bg-[#F7FAF7] flex flex-col relative">
+      <div className="bg-gradient-to-b from-[#5DBE61]/15 to-transparent px-5 pt-[calc(3rem+env(safe-area-inset-top))] pb-0">
         {/* Mode Toggle */}
         <div className="flex glass p-2 rounded-full mb-6 shadow-sm">
           <button
             onClick={() => setMode('recipe')}
             className={`flex-1 py-2.5 text-xs font-bold rounded-full transition-all flex items-center justify-center space-x-2 ${
-              mode === 'recipe' ? 'bg-green-gradient text-white shadow-md' : 'text-gray-500 hover:text-gray-700'
+              mode === 'recipe' ? 'bg-gradient-to-br from-[#81C784] to-[#4CAF50] text-white shadow-md' : 'text-gray-500 hover:text-gray-700'
             }`}
           >
             <Package className="w-4 h-4" />
@@ -127,7 +127,7 @@ export default function GroceriesTab() {
           <button
             onClick={() => setMode('free')}
             className={`flex-1 py-2.5 text-xs font-bold rounded-full transition-all flex items-center justify-center space-x-2 ${
-              mode === 'free' ? 'bg-green-gradient text-white shadow-md' : 'text-gray-500 hover:text-gray-700'
+              mode === 'free' ? 'bg-gradient-to-br from-[#81C784] to-[#4CAF50] text-white shadow-md' : 'text-gray-500 hover:text-gray-700'
             }`}
           >
             <ShoppingCart className="w-4 h-4" />
@@ -137,14 +137,14 @@ export default function GroceriesTab() {
 
         <div className="relative flex items-center mb-6 group">
           <div className="absolute left-4 z-10">
-            <Search className="text-gray-400 w-5 h-5 group-focus-within:text-primary transition-colors" />
+            <Search className="text-gray-400 w-5 h-5 group-focus-within:text-[#5DBE61] transition-colors" />
           </div>
           <input
             type="text"
             placeholder={mode === 'recipe' ? "搜索菜谱食材包..." : "搜索食材..."}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full glass rounded-full py-4 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-primary/30 transition-shadow shadow-sm text-base"
+            className="w-full glass rounded-full py-4 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-[#5DBE61]/30 transition-shadow shadow-sm text-base"
           />
         </div>
       </div>
@@ -170,7 +170,7 @@ export default function GroceriesTab() {
                   className="w-full flex items-center justify-between text-base font-bold text-gray-800 py-1"
                 >
                   <div className="flex items-center">
-                    <span className="w-2 h-4 bg-primary rounded-full mr-3"></span>
+                    <span className="w-2 h-4 bg-[#5DBE61] rounded-full mr-3"></span>
                     {category}
                     <span className="ml-2 text-xs font-bold text-gray-400">({ingredients.length})</span>
                   </div>
@@ -189,12 +189,12 @@ export default function GroceriesTab() {
                         <div key={ingredient.id} className="glass p-4 rounded-[1.5rem] card-shadow flex flex-col justify-between min-h-[100px]">
                           <h3 className="font-bold text-gray-800 text-sm mb-3">{ingredient.name}</h3>
                           <div className="flex justify-between items-center mt-auto">
-                            <p className="text-primary font-bold text-sm">
+                            <p className="text-[#5DBE61] font-bold text-sm">
                               ¥{ingredient.price.toFixed(2)}<span className="text-gray-400 text-[9px] font-medium">/{ingredient.unit}</span>
                             </p>
                             
                             {cartItem ? (
-                              <div className="flex items-center space-x-2 bg-primary/10 rounded-full px-2 py-1">
+                              <div className="flex items-center space-x-2 bg-[#5DBE61]/10 rounded-full px-2 py-1">
                                 <button
                                   onClick={() => {
                                     if (cartItem.amount > 1) {
@@ -207,10 +207,10 @@ export default function GroceriesTab() {
                                 >
                                   <Minus className="w-3 h-3" />
                                 </button>
-                                <span className="font-bold text-primary text-xs w-4 text-center">{cartItem.amount}</span>
+                                <span className="font-bold text-[#5DBE61] text-xs w-4 text-center">{cartItem.amount}</span>
                                 <button
                                   onClick={() => addToCart({ ingredient, amount: 1 })}
-                                  className="w-8 h-8 flex items-center justify-center text-primary bg-white rounded-full shadow-sm transition-all active:scale-90"
+                                  className="w-8 h-8 flex items-center justify-center text-[#5DBE61] bg-white rounded-full shadow-sm transition-all active:scale-90"
                                 >
                                   <Plus className="w-3 h-3" />
                                 </button>
@@ -218,7 +218,7 @@ export default function GroceriesTab() {
                             ) : (
                               <button
                                 onClick={() => addToCart({ ingredient, amount: 1 })}
-                                className="w-10 h-10 bg-green-gradient text-white rounded-full flex items-center justify-center hover:opacity-90 shadow-md transition-all active:scale-90"
+                                className="w-10 h-10 bg-gradient-to-br from-[#81C784] to-[#4CAF50] text-white rounded-full flex items-center justify-center hover:opacity-90 shadow-md transition-all active:scale-90"
                               >
                                 <Plus className="w-5 h-5" />
                               </button>
@@ -249,7 +249,7 @@ export default function GroceriesTab() {
           >
             <div className="flex items-center space-x-4">
               <div className="relative ml-2">
-                <div className="bg-green-gradient p-3 rounded-full shadow-lg">
+                <div className="bg-gradient-to-br from-[#81C784] to-[#4CAF50] p-3 rounded-full shadow-lg">
                   <ShoppingBag className="w-6 h-6 text-white" />
                 </div>
                 <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[9px] font-bold w-5 h-5 flex items-center justify-center rounded-full border-2 border-gray-900">
@@ -261,7 +261,7 @@ export default function GroceriesTab() {
                 <p className="text-[10px] text-gray-400 font-medium tracking-tight">预估总价，免配送费</p>
               </div>
             </div>
-            <button className="bg-green-gradient hover:opacity-90 text-white font-bold px-8 py-4 rounded-lg transition-all shadow-lg active:scale-95">
+            <button className="bg-gradient-to-br from-[#81C784] to-[#4CAF50] hover:opacity-90 text-white font-bold px-8 py-4 rounded-lg transition-all shadow-lg active:scale-95">
               去结算
             </button>
           </div>
@@ -272,7 +272,7 @@ export default function GroceriesTab() {
       {showCart && (
         <div className="fixed inset-0 z-50 flex flex-col justify-end">
           <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" onClick={() => setShowCart(false)} />
-          <div className="bg-bg-light rounded-t-lg w-full max-h-[80vh] flex flex-col relative z-10 shadow-2xl border-t border-white/20">
+          <div className="bg-[#F7FAF7] rounded-t-lg w-full max-h-[80vh] flex flex-col relative z-10 shadow-2xl border-t border-white/20">
             <div className="p-6 border-b border-gray-100 flex justify-between items-center">
               <h2 className="text-lg font-bold text-gray-800">已选食材</h2>
               <button onClick={clearCart} className="text-xs text-gray-400 font-bold flex items-center hover:text-red-500 transition-colors">
@@ -287,10 +287,10 @@ export default function GroceriesTab() {
                     <img src={item.ingredient.image} alt={item.ingredient.name} className="w-14 h-14 rounded-xl object-cover bg-gray-50 mr-4" referrerPolicy="no-referrer" />
                     <div>
                       <h3 className="font-bold text-gray-800 text-sm mb-1">{item.ingredient.name}</h3>
-                      <p className="text-accent font-bold text-sm">¥{item.ingredient.price.toFixed(2)}</p>
+                      <p className="text-[#5DBE61] font-bold text-sm">¥{item.ingredient.price.toFixed(2)}</p>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-3 bg-accent/10 rounded-full px-3 py-2">
+                  <div className="flex items-center space-x-3 bg-[#5DBE61]/10 rounded-full px-3 py-2">
                     <button
                       onClick={() => {
                         if (item.amount > 1) {
@@ -303,10 +303,10 @@ export default function GroceriesTab() {
                     >
                       <Minus className="w-4 h-4" />
                     </button>
-                    <span className="font-bold text-accent text-sm w-5 text-center">{item.amount}</span>
+                    <span className="font-bold text-[#5DBE61] text-sm w-5 text-center">{item.amount}</span>
                     <button
                       onClick={() => addToCart({ ingredient: item.ingredient, amount: 1 })}
-                      className="w-10 h-10 flex items-center justify-center text-accent bg-white rounded-full shadow-sm transition-all active:scale-90"
+                      className="w-10 h-10 flex items-center justify-center text-[#5DBE61] bg-white rounded-full shadow-sm transition-all active:scale-90"
                     >
                       <Plus className="w-4 h-4" />
                     </button>
@@ -318,7 +318,7 @@ export default function GroceriesTab() {
             <div className="p-6 border-t border-gray-100 bg-white/50 backdrop-blur-md pb-[calc(2.5rem+env(safe-area-inset-bottom))]">
               <button
                 onClick={handleCheckout}
-                className="w-full bg-accent hover:bg-accent/90 text-white font-bold py-4 rounded-full shadow-xl shadow-accent/20 flex items-center justify-center space-x-3 transition-all active:scale-95"
+                className="w-full bg-[#5DBE61] hover:bg-[#5DBE61]/90 text-white font-bold py-4 rounded-full shadow-xl shadow-[#5DBE61]/20 flex items-center justify-center space-x-3 transition-all active:scale-95"
               >
                 <CreditCard className="w-5 h-5" />
                 <span>¥{total.toFixed(2)} 立即结算</span>

@@ -44,7 +44,7 @@ export default function ProfileTab() {
     },
     {
       title: '饮食偏好',
-      icon: <Utensils className="w-5 h-5 text-primary" />,
+      icon: <Utensils className="w-5 h-5 text-[#5DBE61]" />,
       action: () => {
         setIsInitialSetup(false);
         setView('preferences');
@@ -73,7 +73,7 @@ export default function ProfileTab() {
     const items = activeSection?.items || [];
 
     return (
-      <div className="bg-bg-light pb-32">
+      <div className="bg-[#F7FAF7] pb-32">
         <div className="glass px-5 py-6 shadow-sm flex items-center mb-6 sticky top-0 z-10 backdrop-blur-lg">
           <button onClick={() => setActivePage(null)} className="mr-4 p-2 glass rounded-full hover:bg-white transition-all shadow-sm">
             <ChevronLeft className="w-6 h-6 text-gray-600" />
@@ -112,8 +112,8 @@ export default function ProfileTab() {
   const visibleSections = sections.filter(s => !s.hidden);
 
   return (
-    <div className="bg-bg-light">
-      <div className="bg-gradient-to-b from-primary/15 to-transparent px-5 pt-[calc(3rem+env(safe-area-inset-top))] pb-10">
+    <div className="bg-[#F7FAF7]">
+      <div className="bg-gradient-to-b from-[#5DBE61]/15 to-transparent px-5 pt-[calc(3rem+env(safe-area-inset-top))] pb-10">
         <div className="flex items-center gap-4 mb-10">
           <div className="w-24 h-24 rounded-lg shadow-2xl overflow-hidden rotate-3">
             <div className="w-full h-full rounded-lg overflow-hidden bg-white">
@@ -158,7 +158,7 @@ export default function ProfileTab() {
                 </div>
                 <span className="font-bold text-gray-700 text-sm">{section.title}</span>
               </div>
-              <ChevronRight className="w-5 h-5 text-gray-300 group-hover:text-primary transition-colors" />
+              <ChevronRight className="w-5 h-5 text-gray-300 group-hover:text-[#5DBE61] transition-colors" />
             </button>
           ))}
         </div>
