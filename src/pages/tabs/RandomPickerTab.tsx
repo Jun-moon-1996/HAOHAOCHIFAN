@@ -79,7 +79,7 @@ export default function RandomPickerTab() {
   return (
     <div className="min-h-full flex flex-col items-center p-5 bg-bg-light overflow-y-auto hide-scrollbar pb-24">
       {/* Header Section */}
-      <div className="w-full flex justify-center items-start mt-8 mb-12 px-5">
+      <div className="w-full flex justify-center items-start mt-[calc(2rem+env(safe-area-inset-top))] mb-12 px-5">
         <div className="text-center">
           <h1 className="text-2xl font-semibold text-gray-800 tracking-tight">今天吃什么</h1>
           <p className="text-xs font-normal text-gray-400 uppercase tracking-widest mt-1">FOODIE MOMENT</p>

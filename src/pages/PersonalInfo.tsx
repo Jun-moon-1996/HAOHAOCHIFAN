@@ -39,7 +39,7 @@ export default function PersonalInfo() {
   };
 
   return (
-    <div className="h-screen bg-bg-light overflow-y-auto pb-20">
+    <div className="h-full bg-bg-light overflow-y-auto pb-20">
       {/* Hidden File Input */}
       <input 
         type="file" 

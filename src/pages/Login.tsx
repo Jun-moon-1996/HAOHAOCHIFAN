@@ -15,9 +15,9 @@ export default function Login() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="h-full bg-primary/5 overflow-y-auto flex flex-col items-center justify-center p-4"
+      className="h-full bg-primary/5 overflow-y-auto flex flex-col items-center justify-start py-12 px-4"
     >
-      <div className="bg-white p-10 rounded-2xl shadow-2xl w-full max-w-sm flex flex-col items-center border border-white/40">
+      <div className="bg-white p-10 rounded-2xl shadow-2xl w-full max-w-sm flex flex-col items-center border border-white/40 my-auto">
         <div className="w-24 h-24 bg-green-gradient rounded-lg flex items-center justify-center mb-8 shadow-xl shadow-primary/30 rotate-3">
           <ChefHat className="text-white w-12 h-12" />
         </div>

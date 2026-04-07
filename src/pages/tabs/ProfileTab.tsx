@@ -73,7 +73,7 @@ export default function ProfileTab() {
     const items = activeSection?.items || [];
 
     return (
-      <div className="min-h-full bg-bg-light pb-24">
+      <div className="bg-bg-light pb-32">
         <div className="glass px-5 py-6 shadow-sm flex items-center mb-6 sticky top-0 z-10 backdrop-blur-lg">
           <button onClick={() => setActivePage(null)} className="mr-4 p-2 glass rounded-full hover:bg-white transition-all shadow-sm">
             <ChevronLeft className="w-6 h-6 text-gray-600" />
@@ -112,8 +112,8 @@ export default function ProfileTab() {
   const visibleSections = sections.filter(s => !s.hidden);
 
   return (
-    <div className="min-h-full bg-bg-light pb-24">
-      <div className="px-5 pt-16 pb-10">
+    <div className="bg-bg-light pb-32">
+      <div className="px-5 pt-[calc(4rem+env(safe-area-inset-top))] pb-10">
         <div className="flex items-center gap-4 mb-10">
           <div className="w-24 h-24 rounded-lg shadow-2xl overflow-hidden rotate-3">
             <div className="w-full h-full rounded-lg overflow-hidden bg-white">

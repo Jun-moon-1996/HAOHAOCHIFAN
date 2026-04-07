@@ -153,7 +153,7 @@ export default function KitDetail() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="h-screen bg-bg-light overflow-y-auto pb-36 relative"
+      className="h-full bg-bg-light overflow-y-auto pb-36 relative"
     >
       {/* Top Image Section */}
       <div className="relative h-[280px] w-full overflow-hidden bg-white">
@@ -345,7 +345,7 @@ export default function KitDetail() {
       </div>
 
       {/* Bottom Cart Bar */}
-      <div className="fixed bottom-8 left-5 right-5 z-20">
+      <div className="fixed bottom-[calc(2rem+env(safe-area-inset-bottom))] left-5 right-5 z-20">
         <div className="bg-gray-900/90 backdrop-blur-xl text-white rounded-lg p-4 flex items-center justify-between shadow-2xl border border-white/10">
           <div className="ml-4">
             <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">预估总价</p>

@@ -31,7 +31,7 @@ export default function RecipeTab() {
 
   return (
     <div className="min-h-full bg-bg-light">
-      <div className="bg-gradient-to-b from-primary/15 to-transparent px-5 pt-12 pb-4">
+      <div className="bg-gradient-to-b from-primary/15 to-transparent px-5 pt-[calc(3rem+env(safe-area-inset-top))] pb-4">
         {/* Search Bar */}
         <div className="relative flex items-center mb-[20px] group">
           <div className="absolute left-4 z-10">

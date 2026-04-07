@@ -111,7 +111,7 @@ export default function GroceriesTab() {
   }, {} as Record<string, typeof INGREDIENTS>);
 
   return (
-    <div className="min-h-full bg-bg-light flex flex-col relative pb-24">
+    <div className="bg-bg-light flex flex-col relative pb-32">
       <div className="px-5 pt-12 pb-0">
         {/* Mode Toggle */}
         <div className="flex glass p-2 rounded-full mb-6 shadow-sm">
@@ -149,7 +149,7 @@ export default function GroceriesTab() {
         </div>
       </div>
 
-      <div className="flex-1 px-5 overflow-y-auto hide-scrollbar">
+      <div className="px-5">
         {mode === 'recipe' ? (
           <div className="space-y-6">
             {dishesWithIngredients.map(dish => (
@@ -242,7 +242,7 @@ export default function GroceriesTab() {
 
       {/* Floating Cart Summary */}
       {totalItems > 0 && !showCart && (
-        <div className="fixed bottom-24 left-4 right-4 z-20">
+        <div className="fixed bottom-[calc(6rem+env(safe-area-inset-bottom))] left-4 right-4 z-20">
           <div 
             onClick={() => setShowCart(true)}
             className="bg-gray-900/95 backdrop-blur-2xl text-white rounded-lg p-3 flex items-center justify-between shadow-2xl cursor-pointer border border-white/10"
@@ -315,7 +315,7 @@ export default function GroceriesTab() {
               ))}
             </div>
 
-            <div className="p-6 border-t border-gray-100 bg-white/50 backdrop-blur-md pb-10">
+            <div className="p-6 border-t border-gray-100 bg-white/50 backdrop-blur-md pb-[calc(2.5rem+env(safe-area-inset-bottom))]">
               <button
                 onClick={handleCheckout}
                 className="w-full bg-accent hover:bg-accent/90 text-white font-bold py-4 rounded-full shadow-xl shadow-accent/20 flex items-center justify-center space-x-3 transition-all active:scale-95"

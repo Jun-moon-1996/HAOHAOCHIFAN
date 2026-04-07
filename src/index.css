@@ -15,9 +15,12 @@
 
 @layer base {
   html, body, #root {
-    @apply h-full overflow-hidden bg-[#F7FAF7];
+    height: 100%;
+    height: 100dvh;
+    @apply overflow-hidden bg-[#F7FAF7];
+    margin: 0;
+    padding: 0;
     -webkit-tap-highlight-color: transparent;
-    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
   }
 
   body {
