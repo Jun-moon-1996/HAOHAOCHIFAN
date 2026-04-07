@@ -17,7 +17,7 @@ export default function AddressList() {
   };
 
   return (
-    <div className="h-screen bg-bg-light overflow-y-auto pb-10">
+    <div className="h-screen bg-[#F7FAF7] overflow-y-auto pb-10">
       {/* Header */}
       <div className="glass px-5 pt-[44px] shadow-sm sticky top-0 z-10 backdrop-blur-lg">
         <div className="h-[44px] flex items-center relative">
@@ -28,7 +28,7 @@ export default function AddressList() {
           <div className="flex-1" />
           <button 
             onClick={handleAdd}
-            className="text-xs font-bold text-primary px-4 py-2 glass rounded-full hover:bg-white transition-all z-10"
+            className="text-xs font-bold text-[#5DBE61] px-4 py-2 glass rounded-full hover:bg-white transition-all z-10"
           >
             新增地址
           </button>
@@ -61,12 +61,12 @@ export default function AddressList() {
                 <div className="flex-1 pr-4">
                   <div className="flex items-center gap-2 mb-1">
                     {addr.isDefault && (
-                      <span className="px-2 py-1 bg-primary text-white text-[10px] font-bold rounded-md">
+                      <span className="px-2 py-1 bg-[#5DBE61] text-white text-[10px] font-bold rounded-md">
                         默认
                       </span>
                     )}
                     {addr.label && (
-                      <span className="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-md">
+                      <span className="px-2 py-1 bg-[#5DBE61]/10 text-[#5DBE61] text-[10px] font-bold rounded-md">
                         {addr.label}
                       </span>
                     )}
@@ -79,7 +79,7 @@ export default function AddressList() {
                 </div>
                 <button 
                   onClick={() => handleEdit(addr.id)}
-                  className="p-2 text-gray-300 hover:text-primary transition-colors"
+                  className="p-2 text-gray-300 hover:text-[#5DBE61] transition-colors"
                 >
                   <Edit3 className="w-4 h-4" />
                 </button>
@@ -97,7 +97,7 @@ export default function AddressList() {
             <p className="text-sm font-medium">暂无收货地址</p>
             <button 
               onClick={handleAdd}
-              className="mt-4 px-6 py-2 bg-primary text-white text-sm font-bold rounded-full shadow-lg shadow-primary/20 active:scale-95 transition-all"
+              className="mt-4 px-6 py-2 bg-[#5DBE61] text-white text-sm font-bold rounded-full shadow-lg shadow-[#5DBE61]/20 active:scale-95 transition-all"
             >
               去添加地址
             </button>

@@ -39,7 +39,7 @@ export default function PersonalInfo() {
   };
 
   return (
-    <div className="h-full bg-bg-light overflow-y-auto pb-20">
+    <div className="h-full bg-[#F7FAF7] overflow-y-auto pb-20">
       {/* Hidden File Input */}
       <input 
         type="file" 
@@ -92,7 +92,7 @@ export default function PersonalInfo() {
                       type="text" 
                       value={nickname} 
                       onChange={(e) => setNickname(e.target.value)}
-                      className="text-sm text-right font-medium text-gray-800 bg-gray-100 px-3 py-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/50"
+                      className="text-sm text-right font-medium text-gray-800 bg-gray-100 px-3 py-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5DBE61]/50"
                     />
                     <button onClick={handleSaveNickname} className="p-1 text-green-500 hover:bg-green-50 rounded-full">
                       <Check className="w-4 h-4" />
@@ -158,7 +158,7 @@ export default function PersonalInfo() {
                 </button>
                 <button 
                   onClick={handleGrantPermission}
-                  className="flex-1 py-4 rounded-2xl text-sm font-bold text-white bg-accent shadow-lg shadow-accent/20 hover:bg-accent/90 transition-colors"
+                  className="flex-1 py-4 rounded-2xl text-sm font-bold text-white bg-[#5DBE61] shadow-lg shadow-[#5DBE61]/20 hover:bg-[#5DBE61]/90 transition-colors"
                 >
                   允许
                 </button>

@@ -80,6 +80,13 @@ export default function RandomPickerTab() {
     setView('dish-detail');
   };
 
+  const hexToRGBA = (hex: string, alpha: number) => {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  };
+
   return (
     <div className="flex flex-col items-center p-5 bg-[#F7FAF7] overflow-y-auto h-full">
       {/* Header Section */}
@@ -141,7 +148,8 @@ export default function RandomPickerTab() {
                       left: `${randomX}%`,
                       top: `${randomY}%`,
                       zIndex: Math.floor(Math.random() * 10),
-                      background: `linear-gradient(to bottom right, ${color.from}CC, ${color.to}66)`
+                      backgroundColor: color.from, // Fallback for older Android
+                      background: `linear-gradient(to bottom right, ${hexToRGBA(color.from, 0.8)}, ${hexToRGBA(color.to, 0.4)})`
                     }}
                   >
                     {/* Subtle highlight for 3D effect */}

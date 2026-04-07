@@ -62,7 +62,7 @@ export default function CustomerService() {
   };
 
   return (
-    <div className="fixed inset-0 bg-bg-light flex flex-col z-[100]">
+    <div className="fixed inset-0 bg-[#F7FAF7] flex flex-col z-[100]">
       {/* Header */}
       <div className="glass px-5 pt-[44px] shadow-sm sticky top-0 z-10 backdrop-blur-lg">
         <div className="h-[44px] flex items-center relative">
@@ -94,8 +94,8 @@ export default function CustomerService() {
               className={`flex items-start gap-3 ${msg.sender === 'user' ? 'flex-row-reverse' : ''}`}
             >
               {msg.sender === 'bot' ? (
-                <div className="w-10 h-10 rounded-full bg-white border-2 border-primary/30 flex items-center justify-center flex-shrink-0 shadow-sm">
-                  <Bot className="w-6 h-6 text-primary" />
+                <div className="w-10 h-10 rounded-full bg-white border-2 border-[#5DBE61]/30 flex items-center justify-center flex-shrink-0 shadow-sm">
+                  <Bot className="w-6 h-6 text-[#5DBE61]" />
                 </div>
               ) : (
                 <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white shadow-sm flex-shrink-0">
@@ -113,7 +113,7 @@ export default function CustomerService() {
                 <div className={`p-4 rounded-lg shadow-sm text-sm leading-relaxed ${
                   msg.sender === 'bot' 
                     ? 'bg-white text-gray-700 rounded-tl-none border border-gray-100' 
-                    : 'bg-primary text-white rounded-tr-none'
+                    : 'bg-[#5DBE61] text-white rounded-tr-none'
                 }`}>
                   {msg.text}
                 </div>
@@ -130,7 +130,7 @@ export default function CustomerService() {
               <button 
                 key={i}
                 onClick={() => handleSend(q)}
-                className="px-4 py-2 bg-white text-gray-600 text-xs rounded-full hover:bg-primary hover:text-white transition-all font-medium border border-gray-100 shadow-sm active:scale-95"
+                className="px-4 py-2 bg-white text-gray-600 text-xs rounded-full hover:bg-[#5DBE61] hover:text-white transition-all font-medium border border-gray-100 shadow-sm active:scale-95"
               >
                 {q}
               </button>
@@ -151,14 +151,14 @@ export default function CustomerService() {
             onChange={(e) => setMessage(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleSend(message)}
             placeholder="请输入您的问题..."
-            className="w-full bg-gray-50 rounded-full py-3 px-5 text-sm focus:outline-none focus:ring-1 focus:ring-primary/30 transition-all border border-gray-100"
+            className="w-full bg-gray-50 rounded-full py-3 px-5 text-sm focus:outline-none focus:ring-1 focus:ring-[#5DBE61]/30 transition-all border border-gray-100"
           />
         </div>
         <div className="flex items-center gap-1">
           {message.trim() ? (
             <button 
               onClick={() => handleSend(message)}
-              className="p-2 bg-primary text-white rounded-full transition-all shadow-lg shadow-primary/20 active:scale-90"
+              className="p-2 bg-[#5DBE61] text-white rounded-full transition-all shadow-lg shadow-[#5DBE61]/20 active:scale-90"
             >
               <Send className="w-5 h-5" />
             </button>

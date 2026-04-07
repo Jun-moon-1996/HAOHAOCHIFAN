@@ -92,7 +92,7 @@ export default function PrivacySettings() {
 
   if (activeDetail) {
     return (
-      <div className="h-screen bg-bg-light overflow-y-auto pb-20">
+      <div className="h-screen bg-[#F7FAF7] overflow-y-auto pb-20">
         {/* Header */}
         <div className="glass px-5 pt-[44px] shadow-sm sticky top-0 z-10 backdrop-blur-lg">
           <div className="h-[44px] flex items-center relative">
@@ -118,7 +118,7 @@ export default function PrivacySettings() {
   }
 
   return (
-    <div className="h-screen bg-bg-light overflow-y-auto pb-20 relative">
+    <div className="h-screen bg-[#F7FAF7] overflow-y-auto pb-20 relative">
       {/* Header */}
       <div className="glass px-5 pt-[44px] shadow-sm sticky top-0 z-10 backdrop-blur-lg">
         <div className="h-[44px] flex items-center relative">
@@ -143,7 +143,7 @@ export default function PrivacySettings() {
                       <span className="text-sm font-medium text-gray-700">{item.name}</span>
                       <button 
                         onClick={() => item.onChange?.()}
-                        className={`w-10 h-5 rounded-full transition-colors relative ${item.value ? 'bg-primary' : 'bg-gray-200'}`}
+                        className={`w-10 h-5 rounded-full transition-colors relative ${item.value ? 'bg-[#5DBE61]' : 'bg-gray-200'}`}
                       >
                         <div className={`absolute top-1 w-3 h-3 bg-white rounded-full transition-all ${item.value ? 'left-6' : 'left-1'}`} />
                       </button>

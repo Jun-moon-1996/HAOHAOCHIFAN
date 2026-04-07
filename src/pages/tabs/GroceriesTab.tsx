@@ -38,11 +38,11 @@ const RecipeKitCard: React.FC<{ dish: Dish }> = ({ dish }) => {
       <div className="ml-4 flex-1">
         <h3 className="font-bold text-gray-800 text-base">{dish.name} 食材包</h3>
         <div className="flex items-center gap-2 mt-1">
-          <p className="text-primary font-bold text-sm">预估 ¥{totalPrice.toFixed(2)}</p>
+          <p className="text-[#5DBE61] font-bold text-sm">预估 ¥{totalPrice.toFixed(2)}</p>
           <span className="text-[10px] text-gray-300 font-medium">|</span>
           <span className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">{dish.ingredients.length + (dish.seasonings?.length || 0)} 种食材</span>
         </div>
-        <div className="mt-2 flex items-center text-[10px] text-accent font-bold uppercase tracking-widest">
+        <div className="mt-2 flex items-center text-[10px] text-[#5DBE61] font-bold uppercase tracking-widest">
           <span>查看详情并加购</span>
           <ChevronRight className="w-3 h-3 ml-1 transition-transform group-hover:translate-x-1" />
         </div>

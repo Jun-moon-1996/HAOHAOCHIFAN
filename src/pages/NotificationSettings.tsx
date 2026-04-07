@@ -15,7 +15,7 @@ export default function NotificationSettings() {
   const Toggle = ({ active, onClick, small = false }: { active: boolean, onClick: () => void, small?: boolean }) => (
     <button 
       onClick={onClick}
-      className={`${small ? 'w-8 h-4' : 'w-10 h-5'} rounded-full transition-colors relative ${active ? 'bg-primary' : 'bg-gray-200'}`}
+      className={`${small ? 'w-8 h-4' : 'w-10 h-5'} rounded-full transition-colors relative ${active ? 'bg-[#5DBE61]' : 'bg-gray-200'}`}
     >
       <div className={`absolute top-0.5 bottom-0.5 bg-white rounded-full transition-all ${small ? 'w-3 h-3' : 'w-4 h-4'} ${active ? (small ? 'left-4.5' : 'left-5.5') : 'left-0.5'}`} />
     </button>
@@ -23,7 +23,7 @@ export default function NotificationSettings() {
 
   if (subView === 'system') {
     return (
-      <div className="h-screen bg-bg-light overflow-y-auto pb-20">
+      <div className="h-screen bg-[#F7FAF7] overflow-y-auto pb-20">
         <div className="glass px-5 pt-[44px] shadow-sm sticky top-0 z-10 backdrop-blur-lg">
           <div className="h-[44px] flex items-center relative">
             <button onClick={() => setSubView('main')} className="p-2 hover:bg-white/50 transition-all rounded-full z-10">
@@ -54,7 +54,7 @@ export default function NotificationSettings() {
 
   if (subView === 'banner') {
     return (
-      <div className="h-screen bg-bg-light overflow-y-auto pb-20">
+      <div className="h-screen bg-[#F7FAF7] overflow-y-auto pb-20">
         <div className="glass px-5 pt-[44px] shadow-sm sticky top-0 z-10 backdrop-blur-lg">
           <div className="h-[44px] flex items-center relative">
             <button onClick={() => setSubView('main')} className="p-2 hover:bg-white/50 transition-all rounded-full z-10">
@@ -88,7 +88,7 @@ export default function NotificationSettings() {
   }
 
   return (
-    <div className="h-screen bg-bg-light overflow-y-auto pb-20">
+    <div className="h-screen bg-[#F7FAF7] overflow-y-auto pb-20">
       {/* Header */}
       <div className="glass px-5 pt-[44px] shadow-sm sticky top-0 z-10 backdrop-blur-lg">
         <div className="h-[44px] flex items-center relative">

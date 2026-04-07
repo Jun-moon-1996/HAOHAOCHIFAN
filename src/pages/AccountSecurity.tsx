@@ -129,7 +129,7 @@ export default function AccountSecurity() {
   ];
 
   return (
-    <div className="h-screen bg-bg-light overflow-y-auto pb-20">
+    <div className="h-screen bg-[#F7FAF7] overflow-y-auto pb-20">
       {/* Header */}
       <div className="glass px-5 pt-[44px] shadow-sm sticky top-0 z-10 backdrop-blur-lg">
         <div className="h-[44px] flex items-center relative">
@@ -254,7 +254,7 @@ export default function AccountSecurity() {
                           value={verificationCode} 
                           onChange={(e) => setVerificationCode(e.target.value)}
                           className={`w-full bg-gray-50 border-none rounded-2xl px-5 py-4 text-sm font-medium focus:ring-2 transition-all ${
-                            phoneError ? 'ring-2 ring-red-500/50' : 'focus:ring-accent/50'
+                            phoneError ? 'ring-2 ring-red-500/50' : 'focus:ring-[#5DBE61]/50'
                           }`}
                           placeholder="请输入4位验证码"
                           maxLength={4}
@@ -263,7 +263,7 @@ export default function AccountSecurity() {
                           onClick={startCountdown}
                           disabled={countdown > 0}
                           className={`absolute right-2 top-2 bottom-2 px-4 rounded-xl text-xs font-bold transition-all ${
-                            countdown > 0 ? 'bg-gray-200 text-gray-400' : 'bg-accent/10 text-accent hover:bg-accent/20'
+                            countdown > 0 ? 'bg-gray-200 text-gray-400' : 'bg-[#5DBE61]/10 text-[#5DBE61] hover:bg-[#5DBE61]/20'
                           }`}
                         >
                           {countdown > 0 ? `${countdown}s` : '获取验证码'}
@@ -282,7 +282,7 @@ export default function AccountSecurity() {
                         onClick={handleVerifyPhone}
                         disabled={verificationCode.length !== 4}
                         className={`flex-1 py-4 rounded-2xl text-sm font-bold text-white transition-all ${
-                          verificationCode.length === 4 ? 'bg-accent shadow-lg shadow-accent/20 hover:bg-accent/90' : 'bg-gray-300'
+                          verificationCode.length === 4 ? 'bg-[#5DBE61] shadow-lg shadow-[#5DBE61]/20 hover:bg-[#5DBE61]/90' : 'bg-gray-300'
                         }`}
                       >
                         下一步
@@ -298,7 +298,7 @@ export default function AccountSecurity() {
                         value={newPhone} 
                         onChange={(e) => setNewPhone(e.target.value)}
                         className={`w-full bg-gray-50 border-none rounded-2xl px-5 py-4 text-sm font-medium focus:ring-2 transition-all ${
-                          phoneError ? 'ring-2 ring-red-500/50' : 'focus:ring-accent/50'
+                          phoneError ? 'ring-2 ring-red-500/50' : 'focus:ring-[#5DBE61]/50'
                         }`}
                         placeholder="请输入新手机号"
                       />
@@ -313,7 +313,7 @@ export default function AccountSecurity() {
                       </button>
                       <button 
                         onClick={handleSavePhone}
-                        className="flex-1 py-4 rounded-2xl text-sm font-bold text-white bg-accent shadow-lg shadow-accent/20 hover:bg-accent/90 transition-colors"
+                        className="flex-1 py-4 rounded-2xl text-sm font-bold text-white bg-[#5DBE61] shadow-lg shadow-[#5DBE61]/20 hover:bg-[#5DBE61]/90 transition-colors"
                       >
                         完成
                       </button>
@@ -357,7 +357,7 @@ export default function AccountSecurity() {
                         value={originalPassword} 
                         onChange={(e) => setOriginalPassword(e.target.value)}
                         className={`w-full bg-gray-50 border-none rounded-2xl px-5 py-4 text-sm font-medium focus:ring-2 transition-all ${
-                          passwordError ? 'ring-2 ring-red-500/50' : 'focus:ring-accent/50'
+                          passwordError ? 'ring-2 ring-red-500/50' : 'focus:ring-[#5DBE61]/50'
                         }`}
                         placeholder="请输入当前登录密码"
                       />
@@ -376,7 +376,7 @@ export default function AccountSecurity() {
                       </button>
                       <button 
                         onClick={handleVerifyPassword}
-                        className="flex-1 py-4 rounded-2xl text-sm font-bold text-white bg-accent shadow-lg shadow-accent/20 hover:bg-accent/90 transition-colors"
+                        className="flex-1 py-4 rounded-2xl text-sm font-bold text-white bg-[#5DBE61] shadow-lg shadow-[#5DBE61]/20 hover:bg-[#5DBE61]/90 transition-colors"
                       >
                         验证
                       </button>
@@ -392,7 +392,7 @@ export default function AccountSecurity() {
                           value={newPassword} 
                           onChange={(e) => setNewPassword(e.target.value)}
                           className={`w-full bg-gray-50 border-none rounded-2xl px-5 py-4 text-sm font-medium focus:ring-2 transition-all ${
-                            passwordError ? 'ring-2 ring-red-500/50' : 'focus:ring-accent/50'
+                            passwordError ? 'ring-2 ring-red-500/50' : 'focus:ring-[#5DBE61]/50'
                           }`}
                           placeholder="请输入新密码"
                         />
@@ -404,7 +404,7 @@ export default function AccountSecurity() {
                           value={confirmNewPassword} 
                           onChange={(e) => setConfirmNewPassword(e.target.value)}
                           className={`w-full bg-gray-50 border-none rounded-2xl px-5 py-4 text-sm font-medium focus:ring-2 transition-all ${
-                            passwordError ? 'ring-2 ring-red-500/50' : 'focus:ring-accent/50'
+                            passwordError ? 'ring-2 ring-red-500/50' : 'focus:ring-[#5DBE61]/50'
                           }`}
                           placeholder="请再次输入新密码"
                         />
@@ -420,7 +420,7 @@ export default function AccountSecurity() {
                       </button>
                       <button 
                         onClick={handleSavePassword}
-                        className="flex-1 py-4 rounded-2xl text-sm font-bold text-white bg-accent shadow-lg shadow-accent/20 hover:bg-accent/90 transition-colors"
+                        className="flex-1 py-4 rounded-2xl text-sm font-bold text-white bg-[#5DBE61] shadow-lg shadow-[#5DBE61]/20 hover:bg-[#5DBE61]/90 transition-colors"
                       >
                         完成
                       </button>

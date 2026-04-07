@@ -13,7 +13,7 @@ export default function Coupons() {
   const coupons = []; // Start with no coupons for new users
 
   return (
-    <div className="h-screen bg-bg-light overflow-y-auto pb-10 relative">
+    <div className="h-screen bg-[#F7FAF7] overflow-y-auto pb-10 relative">
       {/* Header */}
       <div className="glass px-5 pt-[44px] shadow-sm sticky top-0 z-10 backdrop-blur-lg">
         <div className="h-[44px] flex items-center relative">
@@ -31,14 +31,14 @@ export default function Coupons() {
             key={tab}
             onClick={() => setActiveTab(tab)}
             className={`py-3 px-8 text-sm font-black relative transition-all ${
-              activeTab === tab ? 'text-accent scale-110' : 'text-gray-400'
+              activeTab === tab ? 'text-[#5DBE61] scale-110' : 'text-gray-400'
             }`}
           >
             {tab}
             {activeTab === tab && (
               <motion.div 
                 layoutId="couponTab"
-                className="absolute bottom-0 left-0 right-0 h-1 bg-accent rounded-full mx-6 shadow-lg shadow-accent/20" 
+                className="absolute bottom-0 left-0 right-0 h-1 bg-[#5DBE61] rounded-full mx-6 shadow-lg shadow-[#5DBE61]/20" 
               />
             )}
           </button>

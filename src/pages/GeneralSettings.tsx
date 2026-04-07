@@ -21,14 +21,14 @@ export default function GeneralSettings() {
   const Toggle = ({ active, onClick }: { active: boolean, onClick: () => void }) => (
     <button 
       onClick={onClick}
-      className={`w-10 h-5 rounded-full transition-colors relative ${active ? 'bg-primary' : 'bg-gray-200'}`}
+      className={`w-10 h-5 rounded-full transition-colors relative ${active ? 'bg-[#5DBE61]' : 'bg-gray-200'}`}
     >
       <div className={`absolute top-0.5 bottom-0.5 bg-white rounded-full transition-all w-4 h-4 ${active ? 'left-5.5' : 'left-0.5'}`} />
     </button>
   );
 
   return (
-    <div className="h-screen bg-bg-light overflow-y-auto pb-20">
+    <div className="h-screen bg-[#F7FAF7] overflow-y-auto pb-20">
       {/* Header */}
       <div className="glass px-5 pt-[44px] shadow-sm sticky top-0 z-10 backdrop-blur-lg">
         <div className="h-[44px] flex items-center relative">
@@ -59,13 +59,13 @@ export default function GeneralSettings() {
               <div className="flex bg-gray-100 p-1 rounded-lg">
                 <button 
                   onClick={() => setQuality('Normal')}
-                  className={`px-3 py-1 text-xs rounded-md transition-all ${user.generalSettings.nonWifiImageQuality === 'Normal' ? 'bg-white text-primary shadow-sm font-bold' : 'text-gray-400'}`}
+                  className={`px-3 py-1 text-xs rounded-md transition-all ${user.generalSettings.nonWifiImageQuality === 'Normal' ? 'bg-white text-[#5DBE61] shadow-sm font-bold' : 'text-gray-400'}`}
                 >
                   普通
                 </button>
                 <button 
                   onClick={() => setQuality('HD')}
-                  className={`px-3 py-1 text-xs rounded-md transition-all ${user.generalSettings.nonWifiImageQuality === 'HD' ? 'bg-white text-primary shadow-sm font-bold' : 'text-gray-400'}`}
+                  className={`px-3 py-1 text-xs rounded-md transition-all ${user.generalSettings.nonWifiImageQuality === 'HD' ? 'bg-white text-[#5DBE61] shadow-sm font-bold' : 'text-gray-400'}`}
                 >
                   高清
                 </button>

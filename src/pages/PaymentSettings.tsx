@@ -25,7 +25,7 @@ export default function PaymentSettings() {
   ];
 
   return (
-    <div className="h-screen bg-bg-light overflow-y-auto pb-20">
+    <div className="h-screen bg-[#F7FAF7] overflow-y-auto pb-20">
       {/* Header */}
       <div className="glass px-5 pt-[44px] shadow-sm sticky top-0 z-10 backdrop-blur-lg">
         <div className="h-[44px] flex items-center relative">

@@ -272,7 +272,7 @@ export default function AddressEdit() {
                 </div>
                 <button 
                   onClick={() => setIsSearching(true)}
-                  className="px-5 py-3 bg-primary text-white rounded-xl text-xs font-black shadow-lg shadow-primary/20 active:scale-95 transition-all whitespace-nowrap"
+                  className="px-5 py-3 bg-[#5DBE61] text-white rounded-xl text-xs font-black shadow-lg shadow-[#5DBE61]/20 active:scale-95 transition-all whitespace-nowrap"
                 >
                   修改地址
                 </button>
@@ -309,7 +309,7 @@ export default function AddressEdit() {
                     onClick={() => setLabel(l)}
                     className={`px-6 py-3 rounded-2xl text-xs font-bold border transition-all ${
                       label === l 
-                        ? 'bg-primary border-primary text-white shadow-xl shadow-primary/20' 
+                        ? 'bg-[#5DBE61] border-[#5DBE61] text-white shadow-xl shadow-[#5DBE61]/20' 
                         : 'bg-gray-50 border-transparent text-gray-400'
                     }`}
                   >
@@ -339,7 +339,7 @@ export default function AddressEdit() {
                     className="flex items-center gap-3"
                   >
                     <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all ${
-                      gender === '先生' ? 'border-primary bg-primary' : 'border-gray-200'
+                      gender === '先生' ? 'border-[#5DBE61] bg-[#5DBE61]' : 'border-gray-200'
                     }`}>
                       {gender === '先生' && <div className="w-2 h-2 bg-white rounded-full shadow-sm" />}
                     </div>
@@ -350,7 +350,7 @@ export default function AddressEdit() {
                     className="flex items-center gap-3"
                   >
                     <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all ${
-                      gender === '女士' ? 'border-primary bg-primary' : 'border-gray-200'
+                      gender === '女士' ? 'border-[#5DBE61] bg-[#5DBE61]' : 'border-gray-200'
                     }`}>
                       {gender === '女士' && <div className="w-2 h-2 bg-white rounded-full shadow-sm" />}
                     </div>
@@ -383,7 +383,7 @@ export default function AddressEdit() {
               </div>
               <button 
                 onClick={() => setIsDefault(!isDefault)}
-                className={`w-12 h-6 rounded-full transition-all relative ${isDefault ? 'bg-primary' : 'bg-gray-200'}`}
+                className={`w-12 h-6 rounded-full transition-all relative ${isDefault ? 'bg-[#5DBE61]' : 'bg-gray-200'}`}
               >
                 <div className={`absolute top-1 w-4 h-4 bg-white rounded-full transition-all ${isDefault ? 'left-7' : 'left-1'}`} />
               </button>

@@ -16,7 +16,7 @@ export default function Favorites() {
   );
 
   return (
-    <div className="h-screen bg-bg-light overflow-y-auto pb-10">
+    <div className="h-screen bg-[#F7FAF7] overflow-y-auto pb-10">
       {/* Header */}
       <div className="glass px-5 pt-[44px] shadow-sm sticky top-0 z-10 backdrop-blur-lg">
         <div className="h-[44px] flex items-center relative">
@@ -31,14 +31,14 @@ export default function Favorites() {
         {/* Search Bar */}
         <div className="relative flex items-center mt-3 mb-8 group h-[36px]">
           <div className="absolute left-3 z-10">
-            <Search className="text-gray-400 w-4 h-4 group-focus-within:text-accent transition-colors" />
+            <Search className="text-gray-400 w-4 h-4 group-focus-within:text-[#5DBE61] transition-colors" />
           </div>
           <input
             type="text"
             placeholder="在收藏中搜索..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-gray-100/80 rounded-full h-full pl-10 pr-4 focus:outline-none focus:ring-1 focus:ring-accent/30 transition-shadow shadow-sm text-sm"
+            className="w-full bg-gray-100/80 rounded-full h-full pl-10 pr-4 focus:outline-none focus:ring-1 focus:ring-[#5DBE61]/30 transition-shadow shadow-sm text-sm"
           />
         </div>
 
@@ -66,13 +66,13 @@ export default function Favorites() {
                   <h3 className="font-medium text-gray-800 text-base mb-1 line-clamp-1">{dish.name}</h3>
                   <div className="flex flex-wrap gap-1 mb-2">
                     {dish.tags.slice(0, 2).map(tag => (
-                      <span key={tag} className="text-[9px] px-2 py-1 bg-accent/10 text-accent rounded-full font-normal">
+                      <span key={tag} className="text-[9px] px-2 py-1 bg-[#5DBE61]/10 text-[#5DBE61] rounded-full font-normal">
                         {tag}
                       </span>
                     ))}
                   </div>
                   <div className="mt-auto flex items-center text-gray-400 text-xs font-normal">
-                    <Clock className="w-3 h-3 mr-1 text-accent" />
+                    <Clock className="w-3 h-3 mr-1 text-[#5DBE61]" />
                     <span>15分钟</span>
                   </div>
                 </div>

@@ -17,7 +17,7 @@ export default function Orders() {
   const orders = []; // Start with no orders for new users
 
   return (
-    <div className="h-screen bg-bg-light overflow-y-auto pb-10 relative">
+    <div className="h-screen bg-[#F7FAF7] overflow-y-auto pb-10 relative">
       {/* Header */}
       <div className="glass px-5 pt-[44px] shadow-sm sticky top-0 z-20 backdrop-blur-lg">
         <div className="h-[44px] flex items-center gap-2">
@@ -53,7 +53,7 @@ export default function Orders() {
           >
             {tab}
             {activeTab === tab && (
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary rounded-full mx-2" />
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#5DBE61] rounded-full mx-2" />
             )}
           </button>
         ))}
@@ -114,7 +114,7 @@ export default function Orders() {
                         onClick={() => setSelectedYear(year)}
                         className={`px-6 py-2 rounded-lg text-sm font-bold transition-all ${
                           selectedYear === year 
-                            ? 'bg-primary text-white shadow-lg shadow-primary/20' 
+                            ? 'bg-[#5DBE61] text-white shadow-lg shadow-[#5DBE61]/20' 
                             : 'bg-gray-50 text-gray-400 border border-transparent'
                         }`}
                       >
@@ -134,7 +134,7 @@ export default function Orders() {
                         onClick={() => setSelectedMonth(month)}
                         className={`py-3 rounded-lg text-sm font-bold transition-all ${
                           selectedMonth === month 
-                            ? 'bg-primary text-white shadow-lg shadow-primary/20' 
+                            ? 'bg-[#5DBE61] text-white shadow-lg shadow-[#5DBE61]/20' 
                             : 'bg-gray-50 text-gray-400 border border-transparent'
                         }`}
                       >

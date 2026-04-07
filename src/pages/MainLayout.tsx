@@ -19,35 +19,33 @@ export default function MainLayout() {
         {tab === 'profile' && <ProfileTab />}
       </div>
 
-      <div className="fixed bottom-0 left-0 right-0 px-4 pt-2 pb-[env(safe-area-inset-bottom)] bg-[#F7FAF7]/80 backdrop-blur-sm z-50 border-t border-gray-100">
-        <div className="bg-white/95 backdrop-blur-lg rounded-2xl flex justify-around items-center h-[60px] px-2 shadow-lg border border-white/40 mb-[env(safe-area-inset-bottom)]">
-          {[
-            { id: 'recipe', icon: BookOpen },
-            { id: 'random', icon: Dices },
-            { id: 'groceries', icon: ShoppingCart },
-            { id: 'profile', icon: User },
-          ].map(({ id, icon: Icon }) => (
-            <button
-              key={id}
-              onClick={() => setTab(id as any)}
-              className={`flex flex-col items-center justify-center transition-all duration-300 relative ${
-                tab === id 
-                  ? 'text-[#5DBE61]' 
-                  : 'text-gray-400 hover:text-gray-600'
-              }`}
-            >
-              <div className={`transition-all ${tab === id ? 'bg-[#5DBE61]/10 p-1.5 rounded-lg' : ''}`}>
-                <Icon className="w-6 h-6" />
-              </div>
-              {tab === id && (
-                <motion.div 
-                  layoutId="activeTab"
-                  className="absolute -bottom-1 w-1 h-1 bg-[#5DBE61] rounded-full"
-                />
-              )}
-            </button>
-          ))}
-        </div>
+      <div className="fixed !bottom-0 left-0 right-0 pb-[env(safe-area-inset-bottom,34px)] h-[calc(64px+env(safe-area-inset-bottom,34px))] bg-white flex items-start justify-around pt-[10px] shadow-[0_-2px_10px_rgba(0,0,0,0.05)] z-50">
+        {[
+          { id: 'recipe', icon: BookOpen },
+          { id: 'random', icon: Dices },
+          { id: 'groceries', icon: ShoppingCart },
+          { id: 'profile', icon: User },
+        ].map(({ id, icon: Icon }) => (
+          <button
+            key={id}
+            onClick={() => setTab(id as any)}
+            className={`flex flex-col items-center justify-center transition-all duration-300 relative h-[44px] px-4 ${
+              tab === id 
+                ? 'text-[#5DBE61]' 
+                : 'text-gray-400 hover:text-gray-600'
+            }`}
+          >
+            <div className={`transition-all ${tab === id ? 'bg-[#5DBE61]/10 p-1.5 rounded-lg' : ''}`}>
+              <Icon className="w-6 h-6" />
+            </div>
+            {tab === id && (
+              <motion.div 
+                layoutId="activeTab"
+                className="absolute -bottom-1 w-1 h-1 bg-[#5DBE61] rounded-full"
+              />
+            )}
+          </button>
+        ))}
       </div>
     </div>
   );

@@ -54,7 +54,10 @@ function AppContent() {
 export default function App() {
   return (
     <AppProvider>
-      <div className="fixed inset-0 bg-gray-100 flex flex-col sm:items-center sm:justify-center overflow-hidden">
+      <div 
+        className="fixed inset-0 bg-gray-100 flex flex-col sm:items-center sm:justify-center overflow-hidden"
+        style={{ backgroundColor: '#F3F4F6' }}
+      >
         <AppContent />
       </div>
     </AppProvider>

@@ -153,7 +153,7 @@ export default function KitDetail() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="h-full bg-bg-light overflow-y-auto pb-36 relative"
+      className="h-full bg-[#F7FAF7] overflow-y-auto pb-36 relative"
     >
       {/* Top Image Section */}
       <div className="relative h-[280px] w-full overflow-hidden bg-white">
@@ -164,7 +164,7 @@ export default function KitDetail() {
           referrerPolicy="no-referrer" 
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent h-20" />
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-bg-light via-bg-light/40 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#F7FAF7] via-[#F7FAF7]/40 to-transparent" />
         
         <div className="absolute top-12 left-5 right-5 flex justify-between items-center z-20">
           <button
@@ -193,7 +193,7 @@ export default function KitDetail() {
             <div className="flex justify-between items-center mb-6">
               <div className="flex flex-col">
                 <h2 className="text-lg font-semibold text-gray-800 tracking-tight">所需食材</h2>
-                <div className="h-1 w-8 bg-accent rounded-full mt-1" />
+                <div className="h-1 w-8 bg-[#5DBE61] rounded-full mt-1" />
               </div>
               
               <div className="flex items-center space-x-4 glass px-5 py-2 rounded-full shadow-sm">
@@ -226,20 +226,20 @@ export default function KitDetail() {
                   <div key={item.ingredientId} className={`flex items-center p-5 ${index !== selectedDish.ingredients.length - 1 ? 'border-b border-white/10' : ''}`}>
                     <div className="flex-1">
                       <h4 className="font-medium text-gray-800 text-base">{ingredient.name}</h4>
-                      <p className="text-xs font-normal text-accent mt-1 uppercase tracking-wider">¥{ingredient.price.toFixed(2)} / {ingredient.unit}</p>
+                      <p className="text-xs font-normal text-[#5DBE61] mt-1 uppercase tracking-wider">¥{ingredient.price.toFixed(2)} / {ingredient.unit}</p>
                     </div>
                     
-                    <div className="flex items-center space-x-3 bg-accent/10 rounded-full px-3 py-2">
+                    <div className="flex items-center space-x-3 bg-[#5DBE61]/10 rounded-full px-3 py-2">
                       <button
                         onClick={() => handleIngredientAmountChange(item.ingredientId, -1)}
                         className="w-7 h-7 flex items-center justify-center text-gray-500 hover:bg-white rounded-full shadow-sm transition-all active:scale-90"
                       >
                         <Minus className="w-4 h-4" />
                       </button>
-                      <span className="font-medium text-accent text-sm w-6 text-center">{currentAmount}</span>
+                      <span className="font-medium text-[#5DBE61] text-sm w-6 text-center">{currentAmount}</span>
                       <button
                         onClick={() => handleIngredientAmountChange(item.ingredientId, 1)}
-                        className="w-7 h-7 flex items-center justify-center text-accent hover:bg-white rounded-full shadow-sm transition-all active:scale-90"
+                        className="w-7 h-7 flex items-center justify-center text-[#5DBE61] hover:bg-white rounded-full shadow-sm transition-all active:scale-90"
                       >
                         <Plus className="w-4 h-4" />
                       </button>
@@ -256,10 +256,10 @@ export default function KitDetail() {
                 <h2 className="text-lg font-semibold text-gray-800 tracking-tight">可选调料包</h2>
                 <button
                   onClick={() => setIncludeSeasonings(!includeSeasonings)}
-                  className="flex items-center space-x-2 text-xs font-normal text-gray-400 hover:text-accent transition-all uppercase tracking-widest"
+                  className="flex items-center space-x-2 text-xs font-normal text-gray-400 hover:text-[#5DBE61] transition-all uppercase tracking-widest"
                 >
                   {includeSeasonings ? (
-                    <CheckSquare className="w-5 h-5 text-accent" />
+                    <CheckSquare className="w-5 h-5 text-[#5DBE61]" />
                   ) : (
                     <Square className="w-5 h-5 text-gray-300" />
                   )}
@@ -277,10 +277,10 @@ export default function KitDetail() {
                     <div key={item.ingredientId} className={`flex items-center p-5 ${index !== selectedDish.seasonings!.length - 1 ? 'border-b border-white/10' : ''}`}>
                       <div className="flex-1">
                         <h4 className="font-medium text-gray-800 text-base">{ingredient.name}</h4>
-                        <p className="text-xs font-normal text-accent mt-1 uppercase tracking-wider">¥{ingredient.price.toFixed(2)} / {ingredient.unit}</p>
+                        <p className="text-xs font-normal text-[#5DBE61] mt-1 uppercase tracking-wider">¥{ingredient.price.toFixed(2)} / {ingredient.unit}</p>
                       </div>
                       
-                      <div className="flex items-center space-x-3 bg-accent/10 rounded-full px-3 py-2">
+                      <div className="flex items-center space-x-3 bg-[#5DBE61]/10 rounded-full px-3 py-2">
                         <button
                           onClick={() => handleIngredientAmountChange(item.ingredientId, -1)}
                           className="w-7 h-7 flex items-center justify-center text-gray-500 hover:bg-white rounded-full shadow-sm transition-all active:scale-90"
@@ -288,10 +288,10 @@ export default function KitDetail() {
                         >
                           <Minus className="w-4 h-4" />
                         </button>
-                        <span className="font-medium text-accent text-sm w-6 text-center">{currentAmount}</span>
+                        <span className="font-medium text-[#5DBE61] text-sm w-6 text-center">{currentAmount}</span>
                         <button
                           onClick={() => handleIngredientAmountChange(item.ingredientId, 1)}
-                          className="w-7 h-7 flex items-center justify-center text-accent hover:bg-white rounded-full shadow-sm transition-all active:scale-90"
+                          className="w-7 h-7 flex items-center justify-center text-[#5DBE61] hover:bg-white rounded-full shadow-sm transition-all active:scale-90"
                           disabled={!includeSeasonings}
                         >
                           <Plus className="w-4 h-4" />
@@ -308,7 +308,7 @@ export default function KitDetail() {
             <section key={idx}>
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-lg font-semibold text-gray-800 tracking-tight">{opt.name}</h2>
-                <span className="text-xs font-normal text-accent uppercase tracking-widest">{opt.type === 'multiple' ? '多选' : '单选'}</span>
+                <span className="text-xs font-normal text-[#5DBE61] uppercase tracking-widest">{opt.type === 'multiple' ? '多选' : '单选'}</span>
               </div>
               <div className="glass rounded-lg overflow-hidden border border-white/20 shadow-sm">
                 {opt.choices.map((choice, index) => {
@@ -324,15 +324,15 @@ export default function KitDetail() {
                     >
                       <div className="flex items-center gap-4 flex-1">
                         {opt.type === 'multiple' ? (
-                          isSelected ? <CheckSquare className="w-6 h-6 text-accent" /> : <Square className="w-6 h-6 text-gray-300" />
+                          isSelected ? <CheckSquare className="w-6 h-6 text-[#5DBE61]" /> : <Square className="w-6 h-6 text-gray-300" />
                         ) : (
-                          <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all ${isSelected ? 'border-accent bg-accent/10' : 'border-gray-300'}`}>
-                            {isSelected && <div className="w-3 h-3 rounded-full bg-accent shadow-sm shadow-accent/50" />}
+                          <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all ${isSelected ? 'border-[#5DBE61] bg-[#5DBE61]/10' : 'border-gray-300'}`}>
+                            {isSelected && <div className="w-3 h-3 rounded-full bg-[#5DBE61] shadow-sm shadow-[#5DBE61]/50" />}
                           </div>
                         )}
                         <div>
                           <h4 className="font-bold text-gray-800 text-sm">{ingredient.name}</h4>
-                          <p className="text-[10px] font-bold text-accent mt-1 uppercase tracking-wider">+{ingredient.price.toFixed(2)} / {ingredient.unit}</p>
+                          <p className="text-[10px] font-bold text-[#5DBE61] mt-1 uppercase tracking-wider">+{ingredient.price.toFixed(2)} / {ingredient.unit}</p>
                         </div>
                       </div>
                     </div>
@@ -349,12 +349,12 @@ export default function KitDetail() {
         <div className="bg-gray-900/90 backdrop-blur-xl text-white rounded-lg p-4 flex items-center justify-between shadow-2xl border border-white/10">
           <div className="ml-4">
             <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">预估总价</p>
-            <p className="text-2xl font-black text-accent leading-none">¥{totalPrice.toFixed(2)}</p>
+            <p className="text-2xl font-black text-[#5DBE61] leading-none">¥{totalPrice.toFixed(2)}</p>
           </div>
           <button
             onClick={handleAddAllToCart}
             disabled={totalPrice === 0}
-            className="bg-accent hover:bg-accent/90 disabled:bg-gray-700 disabled:text-gray-500 text-white font-semibold px-10 py-4 rounded-full shadow-xl shadow-accent/20 transition-all active:scale-95 flex items-center space-x-3"
+            className="bg-[#5DBE61] hover:bg-[#5DBE61]/90 disabled:bg-gray-700 disabled:text-gray-500 text-white font-semibold px-10 py-4 rounded-full shadow-xl shadow-[#5DBE61]/20 transition-all active:scale-95 flex items-center space-x-3"
           >
             <ShoppingCart className="w-5 h-5" />
             <span className="text-sm uppercase tracking-widest">加入购物车</span>
