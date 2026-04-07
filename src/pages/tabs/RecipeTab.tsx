@@ -42,7 +42,7 @@ export default function RecipeTab() {
             placeholder="你想吃什么？"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full h-[44px] glass rounded-full pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-accent/30 transition-shadow shadow-sm text-sm"
+            className="w-full h-[44px] glass rounded-full pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-accent/30 transition-shadow shadow-sm text-base"
           />
         </div>
         

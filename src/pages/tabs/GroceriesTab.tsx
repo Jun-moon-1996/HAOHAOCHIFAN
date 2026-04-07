@@ -112,7 +112,7 @@ export default function GroceriesTab() {
 
   return (
     <div className="bg-bg-light flex flex-col relative pb-32">
-      <div className="px-5 pt-12 pb-0">
+      <div className="bg-gradient-to-b from-primary/15 to-transparent px-5 pt-[calc(3rem+env(safe-area-inset-top))] pb-0">
         {/* Mode Toggle */}
         <div className="flex glass p-2 rounded-full mb-6 shadow-sm">
           <button
@@ -144,7 +144,7 @@ export default function GroceriesTab() {
             placeholder={mode === 'recipe' ? "搜索菜谱食材包..." : "搜索食材..."}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full glass rounded-full py-4 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-primary/30 transition-shadow shadow-sm text-sm"
+            className="w-full glass rounded-full py-4 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-primary/30 transition-shadow shadow-sm text-base"
           />
         </div>
       </div>

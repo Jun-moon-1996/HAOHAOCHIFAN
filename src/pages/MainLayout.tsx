@@ -19,7 +19,7 @@ export default function MainLayout() {
         {tab === 'profile' && <ProfileTab />}
       </div>
 
-      <div className="shrink-0 px-4 pt-2 pb-[calc(1rem+env(safe-area-inset-bottom))] bg-bg-light/80 backdrop-blur-sm z-50 border-t border-gray-100">
+      <div className="shrink-0 px-4 pt-2 pb-[env(safe-area-inset-bottom,34px)] bg-bg-light/80 backdrop-blur-sm z-50 border-t border-gray-100">
         <div className="bg-white/95 backdrop-blur-lg rounded-2xl flex justify-around items-center h-[60px] px-2 shadow-lg border border-white/40">
           {[
             { id: 'recipe', icon: BookOpen },
